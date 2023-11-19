@@ -1,0 +1,5 @@
+project_id = "hanalytics"
+region = "europe-west1"
+zone = "europe-west1-b"
+bucket_name = ""
+#tf_service_account = "sa-demo-tf-sbx@PROJECT_ID.iam.gserviceaccount.com"
