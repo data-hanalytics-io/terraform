@@ -1,8 +1,7 @@
 terraform {
-    required_version = ">= 1.3.0, < 2.0.0"
     backend "gcs" {
       bucket = "hanalytics-bucket-tfstate"
-      prefix = "global-resources/"
+      prefix = "global-resources"
     }
     required_providers {
       google = {

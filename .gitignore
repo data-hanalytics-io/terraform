@@ -8,3 +8,4 @@ global-ressources/terraform.tfstate.backup
 global-ressources/.terraform/terraform.tfstate
 global-ressources/.terraform/providers/registry.terraform.io/hashicorp/google/4.6.0/darwin_arm64/terraform-provider-google_v4.6.0_x5
 global-ressources/.terraform/providers/registry.terraform.io/hashicorp/google/5.7.0/darwin_arm64/terraform-provider-google_v5.7.0_x5
+compute-engine/.terraform/providers/registry.terraform.io/hashicorp/google/5.7.0/darwin_arm64/terraform-provider-google_v5.7.0_x5
