@@ -1,7 +1,7 @@
 terraform {
     required_version = ">= 1.3.0, < 2.0.0"
     backend "gcs" {
-      bucket = var.bucket_name
+      bucket = "hanalytics-bucket-tfstate"
       prefix = "compute-instance"
     }
     required_providers {

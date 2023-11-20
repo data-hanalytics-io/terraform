@@ -11,11 +11,11 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 
-  metadata_startup_script = file("startup.sh")
+  metadata_startup_script = file("start.sh")
 
   network_interface {
     # A default network is created for all GCP projects
-    network = "default"
+    network = google_compute_network.vpc_network.self_link
     access_config {
     }
   }
@@ -43,13 +43,13 @@ resource "google_compute_firewall" "ssh" {
 # [END vpc_hanalytics_quickstart_ssh_fw]
  
 # [START vpc_hanalytics_quickstart_5000_fw]
-resource "google_compute_firewall" "hanalytics" {
+resource "google_compute_firewall" "app-firewall" {
   name    = "hanalytics-app-firewall"
   network = google_compute_network.vpc_network.id
 
   allow {
     protocol = "tcp"
-    ports    = ["5000"]
+    ports    = ["5000","8080","8000"]
   }
   source_ranges = ["0.0.0.0/0"]
 }
