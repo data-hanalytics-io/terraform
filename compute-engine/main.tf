@@ -1,8 +1,18 @@
 # [START compute_hanalytics_quickstart_vm]
+
+
+# [START compute_regional_external_vm_address]
+resource "google_compute_address" "default" {
+  name   = "static-ip-address"
+  region = var.region
+}
+# [END compute_regional_external_vm_address]
+
 # Create a single Compute Engine instance
 resource "google_compute_instance" "vm_instance" {
   name         = "hanalytics-instance"
   machine_type = "e2-micro"
+  zone = var.zone
   tags         = ["ssh", "http-server"]
 
   boot_disk {
@@ -11,12 +21,13 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 
-  metadata_startup_script = file("start.sh")
+  metadata_startup_script = file("startup.sh")
 
   network_interface {
     # A default network is created for all GCP projects
     network = google_compute_network.vpc_network.self_link
     access_config {
+      nat_ip = google_compute_address.default.address
     }
   }
 }
@@ -42,7 +53,7 @@ resource "google_compute_firewall" "ssh" {
 }
 # [END vpc_hanalytics_quickstart_ssh_fw]
  
-# [START vpc_hanalytics_quickstart_5000_fw]
+# [START vpc_hanalytics_quickstart_ports_fw]
 resource "google_compute_firewall" "app-firewall" {
   name    = "hanalytics-app-firewall"
   network = google_compute_network.vpc_network.id
@@ -53,4 +64,4 @@ resource "google_compute_firewall" "app-firewall" {
   }
   source_ranges = ["0.0.0.0/0"]
 }
-# [END vpc_hanalytics_quickstart_5000_fw]
+# [END vpc_hanalytics_quickstart_ports_fw]
