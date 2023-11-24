@@ -1,7 +1,7 @@
 resource "google_bigquery_dataset" "default" {
   dataset_id                  = var.dataset_id
-  friendly_name               = "test"
-  description                 = "Data for Fastmag"
+  friendly_name               = "dataset_test"
+  description                 = "Dataset of TEST"
   location                    = var.location
 
   labels = {

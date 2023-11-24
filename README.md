@@ -6,6 +6,9 @@
 ### Deployment model
 ![Alt text](image-1.png)
 
+### GitHub Action
+![Alt text](image-2.png)
+
 ### Commands
 In the appropriate folder : 
 - terraform init
