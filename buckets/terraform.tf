@@ -1,7 +1,7 @@
 terraform {
     backend "gcs" {
       bucket = "hanalytics-bucket-tfstate"
-      prefix = "global-resources"
+      prefix = "buckets"
     }
     required_providers {
       google = {

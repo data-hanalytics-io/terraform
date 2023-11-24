@@ -1,4 +1,5 @@
 project_id = "hanalytics-terraform"
-bucket_name = "hanalytics-bucket-tfstate"
-location = "EU"
+table_id = "sales_data"
+dataset_id = "my_fastmag_data"
+#location = "US"
 #tf_service_account = "sa-demo-tf-sbx@PROJECT_ID.iam.gserviceaccount.com"
