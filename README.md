@@ -4,10 +4,9 @@
 ![Alt text](image.png)
 
 ### Deployment model
-![Alt text](deployment.png)
+![Alt text](deployment.svg)
 
 ### GitHub Action
-![Alt text](image-2.png)
 
 ### Commands
 In the appropriate folder : 
