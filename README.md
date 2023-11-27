@@ -4,7 +4,7 @@
 ![Alt text](image.png)
 
 ### Deployment model
-![Alt text](image-1.png)
+![Alt text](deployment.png)
 
 ### GitHub Action
 ![Alt text](image-2.png)
