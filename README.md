@@ -6,12 +6,11 @@
 ### Deployment model
 ![Alt text](deployment.svg)
 
-### GitHub Action
+### GitHub Action (coming...)
 
 ### Commands
 In the appropriate folder : 
-- terraform init
-- terraform plan
+- terraform init/terraform plan
 - terraform apply
 - terraform destroy 
 

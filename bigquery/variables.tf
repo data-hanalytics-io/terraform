@@ -3,10 +3,14 @@ variable "project_id" {
   description = "ID of the Google Project"  
 }
 
-variable "location" {
+variable "source_location" {
   type        = string
-  description = "Default Location"
-  default     = "US"
+  description = "Source Dataset Location"
+}
+
+variable "destination_location" {
+  type        = string
+  description = "Destination Dataset Location"
 }
 
 variable "table_id" {
@@ -17,4 +21,9 @@ variable "table_id" {
 variable "dataset_id" {
   type        = string
   description = "Name of the Dataset"
+}
+
+variable "bigquery_service_account" {
+  type        = string
+  description = "Service Account Email"
 }
