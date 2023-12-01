@@ -99,20 +99,20 @@ resource "google_compute_backend_service" "default" {
   }
 } */
 # to create a DNS zone
-resource "google_dns_managed_zone" "default" {
-  name          = "example-zone-googlecloudexample"
-  dns_name      = "my-test-${random_id.rnd.hex}.io."
-  description   = "Example DNS zone"
-  force_destroy = "true"
-}
+# resource "google_dns_managed_zone" "default" {
+#   name          = "example-zone-googlecloudexample"
+#   dns_name      = "my-test-${random_id.rnd.hex}.io."
+#   description   = "Example DNS zone"
+#   force_destroy = "true"
+# }
 
-# to register web-server's ip address in DNS
-resource "google_dns_record_set" "default" {
-  name         = google_dns_managed_zone.default.dns_name
-  managed_zone = google_dns_managed_zone.default.name
-  type         = "A"
-  ttl          = 300
-  rrdatas = [
-    google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
-  ]
-}
+# # to register web-server's ip address in DNS
+# resource "google_dns_record_set" "default" {
+#   name         = google_dns_managed_zone.default.dns_name
+#   managed_zone = google_dns_managed_zone.default.name
+#   type         = "A"
+#   ttl          = 300
+#   rrdatas = [
+#     google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
+#   ]
+# }

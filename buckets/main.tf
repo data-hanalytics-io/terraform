@@ -11,8 +11,8 @@ resource "google_storage_bucket" "hanalytics_bucket" {
 // default bucket with internet exposition
 resource "google_storage_bucket" "hanalytics_external_bucket" {
   name          = var.internet_bucket_name
-  force_destroy = true
-  location      = var.location
+  force_destroy = false
+  location      = "US"
   storage_class = "STANDARD"
   uniform_bucket_level_access = true
 }
