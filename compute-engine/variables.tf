@@ -25,3 +25,9 @@ variable "machine_type" {
   description = "Default VM Type"
   default     = "e2-micro"
 }
+
+variable "machine_name" {
+  type = string
+  description = "Compute Engine Instance Name"
+  default = "hanalytics-terraform-instance"
+}

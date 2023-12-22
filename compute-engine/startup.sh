@@ -10,3 +10,4 @@ sudo usermod -a -G docker $USER
 
 sudo apt-get -y install docker-compose-plugin
 docker compose version
+echo "Done"

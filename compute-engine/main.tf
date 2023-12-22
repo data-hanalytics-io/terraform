@@ -12,7 +12,7 @@ resource "google_compute_address" "default" {
 
 # Create a single Compute Engine instance
 resource "google_compute_instance" "vm_instance" {
-  name         = "hanalytics-instance"
+  name         = var.machine_name
   machine_type = var.machine_type
   zone = var.zone
   tags         = ["ssh", "http-server"]

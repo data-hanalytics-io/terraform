@@ -1,6 +1,6 @@
 terraform {
     backend "gcs" {
-      bucket = "hanalytics-bucket-tfstate"
+      bucket = "hanalytics-bucket-tfstate_1"
       prefix = "buckets"
     }
     required_providers {

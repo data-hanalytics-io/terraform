@@ -46,7 +46,7 @@ resource "google_bigquery_table" "default" {
 
 resource "google_bigquery_dataset" "my_destination_dataset" {
 
-  dataset_id    = "Destination_dataset"
+  dataset_id    = "Destination_dataset_Test"
   friendly_name = "Dest Dataset"
   description   = "Destination Dataset"
   location      = var.destination_location
